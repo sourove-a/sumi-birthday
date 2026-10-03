@@ -1,0 +1,19 @@
+# Dependencies & build output
+node_modules
+dist
+
+# Local secrets (Supabase keys) — see .env.example
+.env
+.env.*
+!.env.example
+
+# Editor / OS / tool files
+.claude
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.log
+
+# TypeScript build cache
+*.tsbuildinfo
