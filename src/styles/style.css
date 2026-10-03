@@ -265,7 +265,17 @@ input::placeholder, textarea::placeholder { color: #93ab88; }
   font-size: 16px; letter-spacing: .18em; color: var(--lemon); white-space: nowrap;
 }
 
-main { position: relative; z-index: 10; max-width: 1120px; margin: 0 auto; padding: 96px 18px 150px; min-height: 100vh; }
+main {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 96px 18px 150px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: clip;
+}
 
 /* ---------- 6. Home page ---------- */
 .home { gap: clamp(88px, 11vw, 136px); }
