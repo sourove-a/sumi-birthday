@@ -41,9 +41,18 @@
 
 /* ---------- 2. Base ---------- */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; overscroll-behavior-y: none; scrollbar-color: var(--leaf) var(--bg); }
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+  scrollbar-color: var(--leaf) var(--bg);
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100vw;
   background: var(--bg);
   color: var(--cream);
   font-family: var(--f-sans);
