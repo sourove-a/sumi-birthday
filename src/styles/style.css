@@ -133,7 +133,7 @@ input::placeholder, textarea::placeholder { color: #93ab88; }
 .reveal.in { opacity: 1; transform: none; }
 
 /* ---------- 4. Shared parts ---------- */
-.page { display: flex; flex-direction: column; animation: pop .8s ease both; }
+.page { display: flex; flex-direction: column; animation: pop .8s ease both; width: 100%; max-width: 100%; box-sizing: border-box; }
 
 .eyebrow {
   display: flex; align-items: center; justify-content: center; gap: 12px;
