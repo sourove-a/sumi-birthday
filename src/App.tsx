@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactElement } from 'react';
 import { AppContext, useApp, type AppApi } from './context';
 import type { Config, PageId } from './data';
-import { loadConfig, loadPage, saveConfig, savePage } from './lib/config';
+import { fetchCloudConfig, loadConfig, loadPage, saveConfig, savePage } from './lib/config';
 import { isBirthday, isLocked, targetTime } from './lib/derive';
 import { EffectsEngine } from './lib/effects';
 import { useNow } from './lib/hooks';
@@ -32,6 +32,15 @@ export function App() {
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [musicPlaying, setMusicPlaying] = useState(false);
 
+  // Sync latest cloud config from Supabase on mount
+  useEffect(() => {
+    fetchCloudConfig().then(cloudCfg => {
+      if (cloudCfg) {
+        setCfg(prev => ({ ...prev, ...cloudCfg }));
+      }
+    });
+  }, []);
+
   // Refs let long-lived callbacks (canvas, timers) read the latest values
   const live = useRef({ cfg, page, entered });
   live.current = { cfg, page, entered };
@@ -47,7 +56,7 @@ export function App() {
     toastTimer.current = window.setTimeout(() => setToast(null), 2600);
   }, []);
 
-  /* ---- Config (auto-saved) ---- */
+  /* ---- Config (auto-saved & cloud synced) ---- */
   const update = useCallback((fn: (c: Config) => void) => {
     setCfg(prev => {
       const next = clone(prev);
