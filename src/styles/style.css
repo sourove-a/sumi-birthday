@@ -635,6 +635,117 @@ main {
 }
 .qn-dotted .qn-doodle { color: #8a5ae0; }
 
+/* 1. Ancient Royal Parchment with silk ribbon & filigree */
+.qn-parchment {
+  --ink: #321c0e; --rule: rgba(140, 95, 45, .15); padding: calc(var(--line) * 1.5) 26px 22px 32px;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 calc(var(--line) - 1px), var(--rule) calc(var(--line) - 1px) var(--line)),
+    radial-gradient(ellipse at 50% 0%, rgba(255, 230, 180, .45), transparent 70%),
+    radial-gradient(circle at 100% 100%, rgba(130, 75, 25, .22), transparent 60%),
+    radial-gradient(circle at 0% 0%, rgba(130, 75, 25, .18), transparent 50%),
+    #f4e5c8;
+  background-position: 0 calc(var(--line) * .5 + 6px), 0 0, 0 0, 0 0, 0 0;
+  border: 1px solid rgba(160, 110, 50, .32); border-radius: 4px 18px 4px 18px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .08), 0 24px 38px -20px rgba(40, 20, 5, .85);
+}
+.qn-parchment p { font-family: 'Noto Serif Bengali', serif; font-weight: 500; color: #2b1708; }
+.qn-ribbon {
+  position: absolute; top: -14px; right: 30px; width: 22px; height: 46px;
+  background: linear-gradient(135deg, #a61c28, #7a0c16); box-shadow: 0 4px 10px rgba(0, 0, 0, .35);
+  border-radius: 2px 2px 0 0; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
+}
+.qn-filigree { position: absolute; bottom: 12px; right: 16px; font-size: 26px; color: rgba(140, 85, 30, .28); pointer-events: none; }
+.qn-parchment .qn-doodle { color: #8c1e28; }
+
+/* 2. Midnight Celestial Starry Journal with crescent moon clip */
+.qn-midnight {
+  --ink: #e8f2ff; --rule: rgba(160, 200, 255, .14); padding: calc(var(--line) * 1.5) 26px 22px 32px;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, .65) 1px, transparent 1.5px) 20px 20px / 60px 60px,
+    radial-gradient(circle, rgba(160, 220, 255, .5) 1.2px, transparent 1.8px) 50px 45px / 80px 80px,
+    repeating-linear-gradient(180deg, transparent 0 calc(var(--line) - 1px), var(--rule) calc(var(--line) - 1px) var(--line)),
+    radial-gradient(600px 400px at 80% 20%, rgba(60, 110, 220, .35), transparent 70%),
+    linear-gradient(165deg, #151d38 0%, #0c1224 60%, #060913 100%);
+  background-position: 0 0, 0 0, 0 calc(var(--line) * .5 + 6px), 0 0, 0 0;
+  border: 1px solid rgba(130, 180, 255, .25);
+  box-shadow: 0 0 25px -10px rgba(90, 150, 255, .25), 0 24px 38px -20px rgba(0, 5, 20, .9);
+}
+.qn-midnight p { text-shadow: 0 0 10px rgba(180, 220, 255, .4); color: #f0f6ff; }
+.qn-midnight small, .qn-midnight .qn-page { color: rgba(180, 210, 255, .6); }
+.qn-midnight .qn-author { color: #9bc6ff; text-shadow: 0 0 8px rgba(120, 180, 255, .5); }
+.qn-midnight .qn-doodle { color: #7db4ff; filter: drop-shadow(0 0 6px #7db4ff); }
+.qn-moonclip { position: absolute; top: -14px; left: 28px; width: 30px; height: 38px; display: flex; align-items: center; justify-content: center; }
+.qn-moon-shape {
+  width: 24px; height: 24px; border-radius: 50%; box-shadow: 5px 3px 0 0 #f5d77f;
+  transform: rotate(-25deg); filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .4));
+}
+
+/* 3. Polaroid Memory Card with rose-gold tape */
+.qn-polaroid {
+  --ink: #16325c; padding: 34px 22px 34px 22px;
+  background: linear-gradient(175deg, #ffffff, #faf9f6 90%, #f3f0e8);
+  border: 1px solid rgba(0, 0, 0, .06); border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05), 0 22px 34px -18px rgba(0, 0, 0, .6);
+}
+.qn-polaroid blockquote {
+  padding: 16px 14px 18px; background: #fbfbfd; border: 1px solid rgba(0, 0, 0, .05); border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .03);
+}
+.qn-polaroid p { font-family: 'Atma', var(--f-bn); font-weight: 600; color: #193a6f; }
+.qn-rosetape {
+  position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(-1deg);
+  width: 86px; height: 22px;
+  background: linear-gradient(90deg, rgba(255, 182, 193, .75), rgba(255, 218, 224, .85), rgba(255, 182, 193, .75));
+  border: 1px dashed rgba(220, 110, 130, .4); box-shadow: 0 2px 5px rgba(0, 0, 0, .12);
+  display: flex; align-items: center; justify-content: center; color: #c94060;
+}
+.qn-rosetape .ms { font-size: 13px; }
+
+/* 4. Sakura Watercolor Bleed with pressed petal */
+.qn-sakura {
+  --ink: #4f1c2d; --rule: rgba(220, 130, 150, .2); padding: calc(var(--line) * 1.5) 24px 22px 30px;
+  background:
+    radial-gradient(350px 250px at 0% 0%, rgba(255, 180, 200, .45), transparent 70%),
+    radial-gradient(350px 250px at 100% 100%, rgba(255, 190, 175, .4), transparent 70%),
+    repeating-linear-gradient(180deg, transparent 0 calc(var(--line) - 1px), var(--rule) calc(var(--line) - 1px) var(--line)),
+    #fff8fa;
+  background-position: 0 0, 0 0, 0 calc(var(--line) * .5 + 6px), 0 0;
+  border: 1px solid rgba(240, 170, 190, .35); border-radius: 6px 16px 6px 16px;
+  box-shadow: 0 22px 36px -22px rgba(120, 20, 50, .4);
+}
+.qn-sakura p { color: #4a192a; }
+.qn-pressedflower {
+  position: absolute; top: -12px; right: 24px; font-size: 26px;
+  filter: drop-shadow(0 3px 4px rgba(180, 50, 90, .3)); transform: rotate(15deg);
+}
+.qn-sakura .qn-doodle { color: #d64d76; }
+
+/* 5. Vintage Romantic Gazette with safety pin */
+.qn-gazette {
+  --ink: #1f1b18; padding: 38px 24px 22px 24px;
+  background:
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, .015) 0 2px, transparent 2px 4px),
+    radial-gradient(ellipse at 50% 50%, rgba(200, 180, 150, .15), transparent 80%),
+    #f5eedf;
+  border: 2px solid #544436; outline: 1px solid #544436; outline-offset: -5px; border-radius: 2px;
+  box-shadow: 0 22px 34px -20px rgba(0, 0, 0, .7);
+}
+.qn-gazette p { font-family: 'Noto Serif Bengali', serif; font-weight: 500; color: #1a1613; line-height: calc(var(--line) * 0.95); }
+.qn-gazette-head {
+  position: absolute; top: 9px; left: 12px; right: 12px; text-align: center;
+  font-family: 'Bodoni Moda', serif; font-size: 10px; font-weight: 700; letter-spacing: .22em;
+  color: #453528; border-bottom: 1.5px solid #544436; padding-bottom: 4px;
+}
+.qn-safetypin {
+  position: absolute; top: -13px; left: 20px; width: 32px; height: 10px;
+  border-radius: 5px; border: 2px solid #b59247; background: transparent;
+  transform: rotate(-15deg); box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+}
+.qn-safetypin::after {
+  content: ''; position: absolute; right: -2px; top: -3px; width: 8px; height: 12px;
+  border-radius: 3px; background: linear-gradient(135deg, #d4aa54, #8c6827);
+}
+
 /* Mini sample of a page (admin picker) */
 .qn.qn-thumb {
   --line: 7px; display: block; width: 58px; height: 44px; margin: 0; padding: 0; transform: none; border-width: 3px;
@@ -642,6 +753,11 @@ main {
 }
 .qn-thumb.qn-airmail { border-width: 3px; }
 .qn-thumb.qn-chalk { border-width: 3px; }
+.qn-thumb.qn-parchment { border-width: 1px; }
+.qn-thumb.qn-midnight { border-width: 1px; }
+.qn-thumb.qn-polaroid { border-width: 1px; }
+.qn-thumb.qn-sakura { border-width: 1px; }
+.qn-thumb.qn-gazette { border-width: 2px; }
 
 @media (max-width: 700px) {
   .qn-wall { columns: 1; }

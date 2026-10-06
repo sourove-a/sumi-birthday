@@ -17,7 +17,7 @@ export interface Wish {
   /** When it was written (ms) */
   at?: number;
 }
-export type Paper = 'khata' | 'notepad' | 'diary' | 'grid' | 'sticky' | 'kraft' | 'airmail' | 'chalk' | 'dotted';
+export type Paper = 'khata' | 'notepad' | 'diary' | 'grid' | 'sticky' | 'kraft' | 'airmail' | 'chalk' | 'dotted' | 'parchment' | 'midnight' | 'polaroid' | 'sakura' | 'gazette';
 export interface Quote {
   text: string;
   orig?: string;
@@ -132,7 +132,12 @@ export const DEF: Config = {
     { text: 'তোমারেই যেন ভালোবাসিয়াছি শত রূপে শত বার,\nজনমে জনমে, যুগে যুগে অনিবার।', orig: '', author: 'রবীন্দ্রনাথ ঠাকুর' },
     { text: 'চুল তার কবেকার অন্ধকার বিদিশার নিশা,\nমুখ তার শ্রাবস্তীর কারুকার্য।', orig: '', author: 'জীবনানন্দ দাশ' },
     { text: 'ভালোবাসায় জোর খাটে না, এ এমন এক আগুন, গালিব,\nচাইলেই জ্বলে না, নেভাতে চাইলেও নেভে না।', orig: 'Ishq par zor nahin, hai ye woh aatish Ghalib\nKe lagaye na lage aur bujhaye na bane', author: 'মির্জা গালিব' },
-    { text: 'ভালোবাসায় বাঁচা আর মরার কোনো তফাত নেই,\nযাকে দেখে প্রাণ যায়, তাকে দেখেই তো বেঁচে থাকি।', orig: 'Mohabbat mein nahin hai farq jeene aur marne ka\nUsi ko dekh kar jeete hain jis kafir pe dam nikle', author: 'মির্জা গালিব' }
+    { text: 'ভালোবাসায় বাঁচা আর মরার কোনো তফাত নেই,\nযাকে দেখে প্রাণ যায়, তাকে দেখেই তো বেঁচে থাকি।', orig: 'Mohabbat mein nahin hai farq jeene aur marne ka\nUsi ko dekh kar jeete hain jis kafir pe dam nikle', author: 'মির্জা গালিব' },
+    { text: 'আমি তাকেই চেয়েছি যে আমার নীরবতা পড়তে পারে,\nযে হাজারো ভিড়েও শুধু আমার চোখের ভাষা বোঝে।', orig: '', author: '', paper: 'parchment' },
+    { text: 'তুমি আমার রাতের আকাশের সবচেয়ে উজ্জ্বল ধ্রুবতারা,\nযার আলোতে পথ হারিয়েও ফিরে আসা যায়।', orig: 'You are my brightest star in the endless night sky', author: '', paper: 'midnight' },
+    { text: 'প্রতিটি সাধারণ মুহূর্তও অসাধারণ হয়ে ওঠে,\nযখন তুমি পাশে থাকো।', orig: '', author: 'স্মৃতির ফ্রেম', paper: 'polaroid' },
+    { text: 'বসন্তের সব ফুল একপাশে, আর তোমার এক চিলতে হাসি অন্যপাশে—\nতবু তোমার হাসিটাই পৃথিবীর সবচেয়ে স্নিগ্ধ অনুভূতি।', orig: '', author: '', paper: 'sakura' },
+    { text: 'যেখানে ভালোবাসা সত্যি,\nসেখানে হাজারো দূরত্বের মাঝেও দুটি হৃদয় সবসময় পাশাপাশি থাকে।', orig: 'Love knows no distance', author: 'Love Chronicle', paper: 'gazette' }
   ],
   status: [
     "কিছু মানুষকে দেখলেই শান্তি লাগে। আমার সেই মানুষটার আজ জন্মদিন।",
