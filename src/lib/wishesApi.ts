@@ -3,8 +3,11 @@
    Without them, wishes are saved only in the visitor's own browser. */
 import type { Wish } from '../data';
 
-const URL = (import.meta.env.VITE_SUPABASE_URL as string | undefined)?.replace(/\/$/, '');
-const KEY = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
+const DEFAULT_URL = 'https://nlgmoveieuuoxfbjclpn.supabase.co';
+const DEFAULT_KEY = 'sb_publishable_H_YeG1SNdVbIeP-ulReFbg_8_t3D_Nl';
+
+const URL = ((import.meta.env.VITE_SUPABASE_URL as string | undefined) || DEFAULT_URL).replace(/\/$/, '');
+const KEY = (import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined) || DEFAULT_KEY;
 
 export const sharedWishes = !!(URL && KEY);
 

@@ -5,8 +5,11 @@ import { clone } from './utils';
 const PAGE_KEY = 'sumi_page';
 const PAGE_IDS: PageId[] = ['home', 'cake', 'gallery', 'wishes', 'letter', 'admin'];
 
-const SUPABASE_URL = (import.meta.env.VITE_SUPABASE_URL as string | undefined)?.replace(/\/$/, '');
-const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
+const DEFAULT_SUPABASE_URL = 'https://nlgmoveieuuoxfbjclpn.supabase.co';
+const DEFAULT_SUPABASE_ANON_KEY = 'sb_publishable_H_YeG1SNdVbIeP-ulReFbg_8_t3D_Nl';
+
+const SUPABASE_URL = ((import.meta.env.VITE_SUPABASE_URL as string | undefined) || DEFAULT_SUPABASE_URL).replace(/\/$/, '');
+const SUPABASE_KEY = (import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined) || DEFAULT_SUPABASE_ANON_KEY;
 
 export const hasCloudSync = Boolean(SUPABASE_URL && SUPABASE_KEY);
 

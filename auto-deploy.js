@@ -6,7 +6,11 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const GIT_EXTRA_PATH = 'C:\\Users\\souro\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd';
+const GIT_EXTRA_PATH = [
+  'C:\\Users\\souro\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd',
+  'C:\\Users\\souro\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\mingw64\\bin',
+  'C:\\Users\\souro\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\mingw64\\libexec\\git-core'
+].join(';');
 const env = { ...process.env, PATH: `${GIT_EXTRA_PATH};${process.env.PATH || ''}` };
 
 let debounceTimer = null;
