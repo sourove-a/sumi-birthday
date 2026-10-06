@@ -9,7 +9,6 @@ import { MusicPlayer } from './lib/music';
 import { buzz, clone, graphemes } from './lib/utils';
 import { Dock, Lightbox, NextChapter, Toast, TopBar, Veil } from './components/Chrome';
 import { Gate } from './components/Gate';
-import { Loader } from './components/Loader';
 import { Admin } from './pages/Admin';
 import { Cake } from './pages/Cake';
 import { Gallery } from './pages/Gallery';
@@ -141,7 +140,6 @@ export function App() {
       <canvas id="fx" ref={canvasRef} aria-hidden="true" />
       <ScrollProgress page={page} />
       <BirthdayWatcher />
-      <Loader cfg={cfg} />
       {veilId > 0 && <Veil key={veilId} name={cfg.name} />}
       {!entered && <Gate onEnter={enter} onAdmin={openAdmin} />}
       <TopBar onAdmin={openAdmin} />
